@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html>
+<title>Blog - Paul Inzon</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/w3.css">
+<link rel="stylesheet" href="css/rslides.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="responsiveslides.min.js"></script>
+<script>
+  // You can also use "$(window).load(function() {"
+  $(function () {
+
+    // Slideshow 1
+    $("#slider1").responsiveSlides({
+      maxwidth: 800,
+      speed: 800
+    });
+
+    // Slideshow 2
+    $("#slider2").responsiveSlides({
+      auto: false,
+      pager: true,
+      speed: 300,
+      maxwidth: 540
+    });
+
+    // Slideshow 3
+    $("#slider3").responsiveSlides({
+      manualControls: '#slider3-pager',
+      maxwidth: 540
+    });
+
+    // Slideshow 4
+    $("#slider4").responsiveSlides({
+      auto: true,
+      pager: false,
+      nav: false, //show nav bars
+      speed: 600,
+      namespace: "callbacks",
+      before: function () {
+        $('.events').append("<li>before event fired.</li>");
+      },
+      after: function () {
+        $('.events').append("<li>after event fired.</li>");
+      }
+    });
+
+  });
+</script>
+</head>
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Helvetica Neue", sans-serif} /*originally Poppins*/
+body {font-size:16px;}
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1024px) {
+    .bgimg-1, .bgimg-2, .bgimg-3 {
+        background-attachment: scroll;
+    }
+}
+
+@font-face {
+    font-family: Asgalt;
+    src: url(fonts/Asgalt.ttf);
+}
+
+@font-face {
+    font-family: markmywords;
+    src: url(fonts/markmywords.ttf);
+}
+
+
+
+
+</style>
+<body>
+
+  <!-- Sidebar/menu -->
+  <nav class="w3-sidebar w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+    <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+    <div class="w3-container">
+      <h3 class="w3-padding-64"><b>Paul Inzon</b>
+        <br>
+        <font size="3">Welcome to my portfolio.</font>
+      </h3>
+    </div>
+    <div class="w3-sidebar w3-bar-block">
+      <a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Interaction Design</a>
+      <a href="graphics.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Graphics Design</a>
+      <a href="socialmedia.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Social Media Work</a>
+      <a href="blog.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Blog</a>
+      <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contacts</a>
+    </div>
+  </nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding nav-on-top">
+  <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
+
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+  <div class="w3-container" style="margin-top:75px">
+    <h1 class="w3-jumbo"><b>Blog</b></h1>
+    <h1 class="w3-xxxlarge w3-text-red"><b><i>What I'm Up To</i></b></h1>
+
+
+
+    <!-- Start Entry -->
+    <p>
+    <b style="font-size:30px">
+    29/9/18
+    </b>
+    <br>
+    <a class="w3-text-red" style="font-size:20px;font-weight:bold">Listen Out 2018</a><br>
+    I applied for a volunteer position at Listen Out 2018 through my UTS Red Cross mates and a Save-A-Mate (under Red Cross Australia) connection and found myself with a team of good spirited folks. It was my first time at a music festival like this and it was an eye-opening experience for understanding the culture better. There were many people on substances, or simply drunk, but with the existence of the Save-A-Mate program there was an effective countermeasure to the potential negative outcomes of substance abuse. Our team was able to help those of whom came for aid or were brought in, and I am glad to have been part of a fun and fulfilling experience.
+
+    <br>
+
+    <!-- Slideshow start -->
+    <div id="wrapper">
+    <div class="w3-content w3-display-container">
+      <ul class="rslides" id="slider4">
+        <li>
+          <img src="images/blog/2018-9-29 (1).jpg" alt="">
+          <p class="caption"><b>Post event Listen Out sign</b></p>
+        </li>
+        <li>
+          <img src="images/blog/2018-9-29 (2).jpg" alt="">
+          <p class="caption"><b>My favourite in the line-up Snakehips came on as I transferred huts</b></p>
+        </li>
+      </ul>
+    </div>
+    </div>
+    <!-- Slideshow end -->
+
+    </p>
+
+    <!-- End Entry -->
+
+    <!-- Start Entry -->
+    <p>
+    <b style="font-size:30px">
+    28-31/8/18
+    </b>
+    <br>
+    <a class="w3-text-red" style="font-size:20px;font-weight:bold">Pay It Forward Week @ UTS</a><br>
+    What a great time running a PIFW stall with my fellow volunteers as we advertised for donations of non-perishable foods, clothing, toys and books.
+    This event is held by UTS Red Cross, Business Society and the Communications Society. Examples of where the donations will go include: books donated to the Philippines, and the food to the Australian Red Cross refugee centre. It was a fun time hanging with my co-horts and conversing with donors and potential donors. A lady even came in with 16 food items! I took quite a bit of pictures on my camera for the sake of it and even got creative with my mates (also finally learnt what a flat lay photo is).
+
+    <br>
+    <!-- Slideshow start -->
+    <div id="wrapper">
+    <div class="w3-content w3-display-container">
+      <ul class="rslides" id="slider4">
+        <li>
+          <img src="images/blog/2018-8-28-31 (0).jpg" alt="">
+          <p class="caption"><b>Flatlay photo of an amazing single donation</b></p>
+        </li>
+        <li>
+          <img src="images/blog/2018-8-28-31 (1).jpg" alt="">
+          <p class="caption"><b>Foreground: Toys, Background: Friend</b></p>
+        </li>
+        <li>
+          <img src="images/blog/2018-8-28-31 (2).jpg" alt="">
+          <p class="caption"><b>Day 2 Spread</b></p>
+        </li>
+        <li>
+          <img src="images/blog/2018-8-28-31 (3).jpg" alt="">
+          <p class="caption"><b>Day 5 Spread</b></p>
+        </li>
+      </ul>
+    </div>
+    </div>
+    <!-- Slideshow end -->
+    </p>
+
+    <!-- End Entry -->
+
+    <!-- Start Entry -->
+    <p>
+    <b style="font-size:30px">
+    17/8/18
+    </b>
+    <br>
+    <a class="w3-text-red" style="font-size:20px;font-weight:bold">Accenture Open Day</a><br>
+    It was a fun time attending Accenture Open Day with a couple of likeminded friends. We came in with expectations of understanding the workplace culture a lot more, and to see what opportunities behold us at Accenture. Needless to say, our expectations were met.  I had a great time conversing with a lot of their employees, asking them about their perspective of how the job treats them and how they push onwards to do what they need to do. One of my most memorable conversations were with one of Accenture's technology consultants, Kanchan Vaidya. One of her points emphasized a lot on self betterment, and the benefits of undergoing meditation in order to clear your mind. It was an interesting and unexpected point, but is definitely a welcome tip.
+  <br>
+  <!-- Slideshow start -->
+  <div id="wrapper">
+    <div class="w3-container">
+      <ul class="rslides" id="slider4">
+        <li>
+          <img src="images/blog/2018-8-17 (1).jpg" alt="">
+          <p class="caption"><b>New and Old friends come together</b></p>
+        </li>
+        <li>
+          <img src="images/blog/2018-8-17 (2).jpg" alt="">
+          <p class="caption"><b>Awesome Interior @ Accenture Sydney</b></p>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- Slideshow end -->
+    </p>
+
+    <!-- End Entry -->
+
+    <!-- Start Entry -->
+    <p>
+    <b style="font-size:30px">
+    16/8/18
+    </b>
+    <br>
+    <a class="w3-text-red" style="font-size:20px;font-weight:bold">UTS Red Cross First Aid Event + The Amazing KEN</a><br>
+    This afternoon I closed my society’s First Aid event, making sure to see the new First Aiders a very GOOD bye and a great time. It was a nostalgic sight seeing students sit on the ground listening to the instructor. The instructor’s name is Ken and proved to be very helpful to the students (Ironically I understood very FEW of the terms he mentioned but I got the concepts thanks to his great explanations). I stood back to help Ken with his departure, and fortunately was able to learn more about him (he volunteers to help fight FIRES). Eventually Ken and I started a deep conversation about how sad it is that people don’t understand that there are more people that care about them than don’t (how thematic). Ken is a father of 2, a true blue First Aid teacher and made me almost tear up.
+<br>
+    <br>
+    <!-- Slideshow start -->
+    <div id="wrapper">
+      <div class="w3-container">
+        <ul class="rslides" id="slider4">
+          <li>
+            <img src="images/blog/2018-8-16 (1).jpg" alt="">
+            <p class="caption"><b>Class in Session</b></p>
+          </li>
+          <li>
+            <img src="images/blog/2018-8-16 (2).jpg" alt="">
+            <p class="caption"><b>Group Photo!</b></p>
+          </li>
+          <li>
+            <img src="images/blog/2018-8-16 (3).jpg" alt="">
+            <p class="caption"><b>Amazing Ken + Me</b></p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- Slideshow end -->
+    </p>
+    <!-- End Entry -->
+
+    <!-- Start Entry -->
+    <p>
+    <b style="font-size:30px">
+    15/8/18
+    </b>
+    <br>
+    <a class="w3-text-green" style="font-size:25px;font-weight:bold">D<a style="font-size:25px;font-weight:bold">eloitte Insight Night!</a><br>
+    I attended Deloitte’s Insight Night and gathered useful information about the friendly and professional nature of Deloitte. I had the privilege to speak to their many representatives, including Jenna their front-end developer at Digital, Anton who manages UX at Digital, and Simon who is a graduate who has been working at Deloitte for 8 months in their Security sector. Speaking to these wonderful people felt empowering and led me to better understand what areas in IT I yearn to work in.<br>
+    Of these include:
+
+<br>
+
+    <ul>
+    <li>Consultancy – Exposure to different types of clients pinch my curious personality and passion for close collaboration)</li>
+    <li>UX design – Working with human centered design methods makes for a fulfilling job with much room for creativity and inquisitive communication)</li>
+    <li>Security – I have always been interested in current technology as a child, and so used to snoop around the processes of ‘hacking’ gaming machines and even found success doing it on several machines (using only internet tutorials). Working for Deloitte Security means that you may be preceding hacks in order to prevent it from happening. Simon demonstrated it during the night and the processes throw me back!</li>
+    </ul>
+
+    Ref:
+    https://www2.deloitte.com/au/en/pages/careers/articles/insight-night.html <br><br>
+
+    <div class="w3-content w3-display-container">
+        <img src="images/blog/2018-8-15.jpg" style="width:100%">
+    </div>
+
+    </p>
+    <br>
+    <!-- End Entry -->
+
+    <!-- Start Entry -->
+    <p>
+    <b style="font-size:30px">
+    14/8/18
+    </b>
+    <br>
+    <a class="w3-text-red" style="font-size:20px;font-weight:bold">The Job Truth Series: Interaction Design</a><br>
+    Today I attended an informational event named ‘The Job Truth Series: Interaction Design’ at UTS. There were 5 guest speakers, all of whom have a background in UX. The speakers lent us a piece of their background and their experiences.
+They answered many questions asked by the audience, one of which was – “How in demand are UX/UI designers in Sydney, and how necessary is it to know programming/software development as a designer?”.
+Daniel Postlethwaite, Senior Digital Recruitment Consultant at Hays IT said that the job is rapidly growing in Sydney. Viveka Weiley (Head of New Things at CHOICE) answered that the development side of UX is not as much coding, but contributes heavily to the prototyping side of it. I learnt that the RnD process involves understanding how to use traditional brainstorming processes (e.g. hand to paper drawing) and using hi-fi prototyping applications, i.e. Sketch.
+<br>
+    <br>
+    Ref:
+    https://medium.springboard.com/the-art-of-the-user-interview-cf40d1ca62e8 <br>
+    <!-- Slideshow start -->
+    <div id="wrapper">
+      <div class="w3-container">
+        <ul class="rslides" id="slider4">
+          <li>
+            <img src="images/blog/2018-8-14 (1).jpg" alt="">
+            <p class="caption"><b>Special Guests</b></p>
+          </li>
+          <li>
+            <img src="images/blog/2018-8-14 (2).jpg" alt="">
+            <p class="caption"><b>Good Man + Danica (Friend & Special Guest) + Me + Kim (Tutor & Friend)</b></p>
+          </li>
+          <li>
+            <img src="images/blog/2018-8-14 (3).jpg" alt="">
+            <p class="caption"><b>Head of Interaction Design @ UTS - Andrew Johnston + Me + Viveka Weiley</b></p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- Slideshow end -->
+
+    </p>
+    <!-- End Entry -->
+
+    <!-- Start Entry -->
+    <p>
+    <b style="font-size:30px">
+    10/8/18
+    </b>
+    <br>
+    <a class="w3-text-red" style="font-size:20px;font-weight:bold">Reading: How to Interview</a><br>
+    I read a very useful article my tutor for Advanced Interaction Design - Kim Lim linked me.
+It focuses on how to conduct an effective interview.<br>
+Key points:<br>
+
+  <ul>
+    <li>Keep the questions and your personal stance neutral</li>
+    <li>Be responsive to the interviewee and create a natural conversation</li>
+    <li>Don’t fill in all the silences and use intriguing expressions, i.e. subtle lifting of eyebrows. Participants tend to expand on their answer in the moment of silence or after a good eyebrow lift</li>
+  </ul>
+
+    Ref:
+    https://medium.springboard.com/the-art-of-the-user-interview-cf40d1ca62e8
+    </p>
+
+    <!-- End Entry -->
+
+    <!-- Start Entry -->
+    <p>
+    <b style="font-size:30px">
+    8/8/18
+    </b>
+    <br>
+    <a class="w3-text-red" style="font-size:20px;font-weight:bold">Internship Careers Fair</a><br>
+    I attended the Careers fair as there were many IT based internships and companies to learn about, including InfoSys, ACS & Suncorp. Talking to the representatives gave me relevant insight as to how their sectors work and the opportunities available within them. I had a fun extended talk with a representative at the Suncorp booth who happens to be an executive of their IT team. <br>
+    <br>
+    </p>
+    <!-- End Entry -->
+
+    <!-- Start Entry -->
+    <p>
+    <b style="font-size:30px">
+    2/8/18
+    </b>
+    <br>
+    <a class="w3-text-red" style="font-size:20px;font-weight:bold">Clubs Day representing UTS Red Cross</a><br>
+    Today was a fun day advertising and selling our UTS Red Cross membership. There was a lot of traffic in our area and fortunately we had some our friends coincidentally rock up at our stall of whom were quite easy to persuade into joining our society. We made record signups!<br>
+    <br>
+    </p>
+    <!-- End Entry -->
+
+    <!-- Start Entry -->
+    <p>
+    <b style="font-size:30px">
+    15/7/18
+    </b>
+    <br>
+    <a class="w3-text-red" style="font-size:20px;font-weight:bold"> UTS RC Experience Summary</a><br>
+    Today my friend and Vice President of UTS Red Cross – Daniel Ferrel asked me to create a 150 word summary of my time as a GC member at the society. It was a fun time recollecting what I remember of my contributions with UTS RC. This screenshot should reflect how much I love the team and what we do.<br>
+    <br>
+
+    <img class="resp-container" width="50%" height="50%" src="images/blog/2018-7-15.jpg">
+
+    </p>
+    <!-- End Entry -->
+
+    <!-- Start Entry -->
+    <p>
+    <b style="font-size:30px">
+    15/6/18
+    </b>
+    <br>
+    <a class="w3-text-red" style="font-size:20px;font-weight:bold">UTS Interaction Design & Games Evening #2</a><br>
+    Guest Speaker: Viveka Weiley, Head of New Things at Choice<br>
+This night produced many renewed mindsets about UX as Viveka spoke about the direction Interaction and Games Design is headed towards.
+The significance of this night to me is his explanation of the practicality of a UX designer’s work. Much MUCH more than an office job, a UX designer can MAKE his career by pitching his OWN ideas to those who share his ideals and can make the DREAM happen.
+
+    <br>
+    <br>
+    Ref:
+    https://www.eventbrite.com.au/e/uts-interaction-design-games-evening-2-tickets-46687188638#tickets
+    </p>
+    <!-- End Entry -->
+
+    <!-- Start Entry -->
+    <p>
+    <b style="font-size:30px">
+    22/5/18
+    </b>
+    <br>
+    <a class="w3-text-red" style="font-size:20px;font-weight:bold">UTS Amazing Race w/UTS RC Team</a><br>
+What a HECTIC day competing at the UTS Amazing Race with my Red Cross squad. There were so many disqualifications during the race, one of which happened right in front of us (letting them go first was part of our plan). Nevertheless it was so much fun seeing each other pant for our lives while frantically trying to find out the answer to the riddles. We didn’t rank competitively, but I know we won in our hearts <3.     <br>
+    <br>
+
+
+
+    </p>
+    <!-- End Entry -->
+
+<!-- Start Entry -->
+<p>
+<b style="font-size:30px">
+12/5/18
+</b>
+<br>
+<a class="w3-text-red" style="font-size:20px;font-weight:bold">UTS Red Cross Committee Bowling & Escape Room</a><br>
+Had a brilliant time with my RC mates struggling to bowl. The few 9s I got taunt me to this moment (no strikes … YET) but it was awesome. We did the horror escape room and let me just say I didn’t realise I could get spooked with so many people around me.
+<br>
+<br>
+<!-- <img class="resp-container" width="50%" height="50%" src="images/blog/2018-5-12.jpg"> -->
+
+<div class="w3-content w3-display-container">
+    <img src="images/blog/2018-5-12.jpg" style="width:100%">
+</div>
+
+</p>
+<!-- End Entry -->
+<!-- Start Entry -->
+<p>
+<b style="font-size:30px">
+3/5/18
+</b>
+<br>
+<a class="w3-text-red" style="font-size:20px;font-weight:bold">UTS Interaction Design & Games Evening</a><br>
+Guest Speaker: Susan Wolfe, UX Practitioner and Educator for 30+ years
+Susan Wolfe delivered a fantastic socially interactive presentation conveying her experiences in her UX career. I learnt tonight that in order to live a fulfilling life as a UX designer, I must apply the design techniques I learn here to organizations that extend even farther than where I live. To work is one thing, but to positively affect the world in what I do should be what I aspire to be.
+<br>
+<br>
+Ref:
+https://www.eventbrite.com.au/e/uts-interaction-design-games-evening-tickets-45222884866?
+</p>
+<!-- End Entry -->
+
+</div>
+
+
+
+<!-- Contacts -->
+  <div class="w3-display-container w3-opacity-min">
+    <div class="w3-content w3-container w3-padding-64" id="contact">
+
+          <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i>
+          <a style="color:black">Sydney, Australia</a>
+          <br>
+          <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i>
+          <a style="color:black">Phone: 0466 490 347</a>
+          <br>
+          <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i>
+          <a style="color:black">Email: paul.inzon-1@student.uts.edu.au</a>
+          <br>
+        </div>
+  </div>
+
+<!-- End page content -->
+</div>
+
+<script>
+  $(function() {
+    $(".rslides").responsiveSlides();
+  });
+</script>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+}
+
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+</script>
+
+</body>
+</html>
