@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<title>Graphics - Paul Inzon</title>
+<title>Social Media Work - Paul Inzon</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="css/w3.css">
@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
 
 <style>
-body,h1,h2,h3,h4,h5 {font-family: "PT Mono", sans-serif} /*originally Poppins*/
+body,h1,h2,h3,h4,h5 {font-family: "Helvetica Neue", sans-serif} /*originally Poppins*/
 body {font-size:16px;}
 .w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
 .w3-half img:hover{opacity:1}
@@ -20,6 +20,42 @@ body {font-size:16px;}
     }
 }
 
+@font-face {
+    font-family: Asgalt;
+    src: url(fonts/Asgalt.ttf);
+}
+/* INSITE TABS */
+/* BEGIN Style tab links */
+
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+
+#Home {background-color: white;}
+#News {background-color: white;}
+
+/* END Style tab links */
+<
 </style>
 <body>
 
@@ -29,13 +65,15 @@ body {font-size:16px;}
     <div class="w3-container">
       <h3 class="w3-padding-64"><b>Paul Inzon</b>
         <br>
-        <font size="3">    Hi! Welcome to my Graphics Portfolio.</font>
+        <font size="3">Welcome to my portfolio.</font>
       </h3>
     </div>
     <div class="w3-sidebar w3-bar-block">
-      <a href="index.html" onclick="w3_close()" class="w3-button w3-hover-grey">01</a>
-      <a href="socialmedia.html" onclick="w3_close()" class="w3-button w3-hover-grey">02</a>
-      <a href="#contact" onclick="w3_close()" class="w3-button w3-hover-grey">Contacts</a>
+      <a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Interaction Design</a>
+      <a href="graphics.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Graphics Design</a>
+      <a href="socialmedia.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Social Media Work</a>
+      <a href="blog.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Blog</a>
+      <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contacts</a>
     </div>
   </nav>
 
@@ -53,99 +91,91 @@ body {font-size:16px;}
 
   <!-- Header -->
   <div class="w3-container" style="margin-top:80px" id="showcase">
-    <h1 class="w3-jumbo"><b>Social Media</b></h1>
-    <hr style="width:50px;border:5px solid black" class="w3-animate-bottom w3-sharp">
+    <h1 class="w3-jumbo"><b>Social Media Work</b></h1>
+    <h1 class="w3-xxxlarge w3-text-red"><b><i>Showcase</i></b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
   </div>
 
 
 <!-- BEGIN On-site tabs -->
-<button class="w3-animate-bottom w3-button w3-hover-grey" onclick="openPage('Home', this, 'white')" id="defaultOpen">Graphics</button>
-<button class="w3-animate-bottom w3-button w3-hover-grey" onclick="openPage('News', this, 'white')">Newsletters</button>
+<button class="tablink" onclick="openPage('Home', this, 'red')" id="defaultOpen">Graphics</button>
+<button class="tablink" onclick="openPage('News', this, 'red')">Newsletters</button>
 
-<br>
 
 <div id="Home" class="tabcontent">
     <!-- Social Media works -->
     <div class="w3-row-padding">
-      <div class="w3-animate-left w3-third w3-container w3-margin-bottom">
-            <img src="images/socialmedia/First Aid 5th FB Post.jpg" style="width:100%" class="w3-hover-opacity" onclick="onClick(this)" alt="First Aid 5th Facebook Post">
-      </div>
-      <div class="w3-animate-left w3-third w3-container w3-margin-bottom">
-            <img src="images/socialmedia/First Aid 2019 Banner - 2.jpg" style="width:100%" class="w3-hover-opacity" onclick="onClick(this)" alt="First Aid 2019 Banner - 2">
-      </div>
-      <div class="w3-animate-left w3-third w3-container w3-margin-bottom">
-            <img src="images/socialmedia/First Aid 2019 Banner - 1.jpg" style="width:100%" class="w3-hover-opacity" onclick="onClick(this)" alt="First Aid 2019 Banner - 1">
-      </div>
-      <div class="w3-animate-left w3-third w3-container w3-margin-bottom">
+      <div class="w3-third w3-container w3-margin-bottom">
+            <img src="images/graphics/First Aid 2019.jpg" style="width:100%" class="w3-hover-opacity" onclick="onClick(this)" alt="First Aid 2019 Banner">
+          </div>
+      <div class="w3-third w3-container w3-margin-bottom">
         <img src="images/socialmedia/ABMT Banner.jpg" style="width:100%" class="w3-hover-opacity" onclick="onClick(this)" alt="ABMT with ARCS 2019">
       </div>
-      <div class="w3-animate-left w3-third w3-container w3-margin-bottom">
+      <div class="w3-third w3-container w3-margin-bottom">
         <img src="images/socialmedia/BD2019 - Sem 1.jpg" style="width:100%" class="w3-hover-opacity" onclick="onClick(this)" alt="Blood Drive Semester 1!">
       </div>
-      <div class="w3-animate-left w3-third w3-container w3-margin-bottom">
+      <div class="w3-third w3-container w3-margin-bottom">
         <img src="images/socialmedia/ANZAC Day.jpg" style="width:100%" class="w3-hover-opacity" onclick="onClick(this)" alt="ANZAC Day Volunteering Banner">
       </div>
-      <div class="w3-animate-left w3-third w3-container w3-margin-bottom">
+      <div class="w3-third w3-container w3-margin-bottom">
         <img src="images/socialmedia/Events.jpg" style="width:100%" class="w3-hover-opacity" onclick="onClick(this)" alt="UTS RC 2019 Events as of 18/03">
       </div>
-      <div class="w3-animate-left w3-third w3-container w3-margin-bottom">
+      <div class="w3-third w3-container w3-margin-bottom">
         <img src="images/socialmedia/Goals.jpg" style="width:100%" class="w3-hover-opacity" onclick="onClick(this)" alt="UTS RC 2019 Goals">
       </div>
-      <div class="w3-animate-left w3-third w3-container w3-margin-bottom">
+      <div class="w3-third w3-container w3-margin-bottom">
         <img src="images/socialmedia/oday2019.png" style="width:100%" class="w3-hover-opacity" onclick="onClick(this)" alt="UTS Red Cross Society O'day 2019 banner">
       </div>
-      <div class="w3-animate-left w3-third w3-container w3-margin-bottom">
+      <div class="w3-third w3-container w3-margin-bottom">
+        <img src="images/socialmedia/Field Day 2019.jpg" style="width:83%" class="w3-hover-opacity" onclick="onClick(this)" alt="Field Day 2019">
+      </div>
+      <div class="w3-third w3-container w3-margin-bottom">
         <img src="images/socialmedia/YAC FB post.jpg" style="width:100%" class="w3-hover-opacity" onclick="onClick(this)" alt="Youth Advisory Committee FB Picture">
       </div>
       <div class="w3-third w3-container w3-margin-bottom">
-        <img src="images/socialmedia/YAC Email pic v2.jpg" style="width:100%" class="w3-animate-left w3-hover-opacity" onclick="onClick(this)" alt="Youth Advisory Committee Email Picture">
+        <img src="images/socialmedia/YAC Email pic v2.jpg" style="width:100%" class="w3-hover-opacity" onclick="onClick(this)" alt="Youth Advisory Committee Email Picture">
       </div>
-      <div class="w3-animate-left w3-third w3-container w3-margin-bottom">
+      <div class="w3-third w3-container w3-margin-bottom">
         <img src="images/socialmedia/Pay it forward Reminder 3 Days.jpg" style="width:91%" class="w3-hover-opacity" onclick="onClick(this)" alt="Pay It Forward Reminder - 3 Days">
       </div>
-        <iframe class="w3-animate-left" src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FUTSRedCrossSociety%2Fvideos%2F1227986344005153%2F&show_text=0&width=560" width="560" height="315" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
-      <div class="w3-animate-left w3-third w3-container w3-margin-bottom">
+      <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FUTSRedCrossSociety%2Fvideos%2F1227986344005153%2F&show_text=0&width=560" width="560" height="315" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
+      <div class="w3-third w3-container w3-margin-bottom">
+        <img src="images/socialmedia/blooddrivebanner.jpg" style="width:100%" class="w3-hover-opacity" onclick="onClick(this)" alt="UTS Red Cross Blood Drive Banner Sem 2 2018">
+      </div>
+      <div class="w3-third w3-container w3-margin-bottom">
         <img src="images/socialmedia/firstaidtom.jpg" style="width:100%" class="w3-hover-opacity" onclick="onClick(this)" alt="First Aid Reminder">
       </div>
-      <div class="w3-animate-left w3-third w3-container w3-margin-bottom">
+      <div class="w3-third w3-container w3-margin-bottom">
         <img src="images/socialmedia/pre-work.jpg" style="width:100%" class="w3-hover-opacity" onclick="onClick(this)" alt="Pre-work Reminder">
       </div>
-      <div class="w3-animate-left w3-third w3-container w3-margin-bottom">
+      <div class="w3-third w3-container w3-margin-bottom">
         <img src="images/socialmedia/1 week left.jpg" style="width:100%" class="w3-hover-opacity" onclick="onClick(this)" alt="1 Week Left Reminder">
       </div>
 </div>
 
 
-<!-- Modal for full size images on click-->
-<div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
-  <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
-  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
-    <img id="img01" class="w3-image">
-    <p id="caption"></p>
-  </div>
-</div>
+    <!-- Modal for full size images on click-->
+    <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+      <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+      <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+        <img id="img01" class="w3-image">
+        <p id="caption"></p>
+      </div>
+    </div>
 </div>
 
-
-<!-- BEGIN Newsletters list -->
-<!-- To make new On-site tabs and have the pics have popup modals. 1. copy whole, change 'modal01' & 'img01' to new number 2. Duplicate the 'Modal Image Gallery' at the bottom of the page and change to respective numbers [the "Onclick#", "img##" and "modal##"]. -->
+<!-- To make new in-site tabs and have the pics have popup modals. 1. copy whole, change 'modal01' & 'img01' to new number 2. Duplicate the 'Modal Image Gallery' at the bottom of the page and change to respective numbers. -->
 <div id="News" class="tabcontent">
 
   <div class="w3-row-padding">
     <div class="w3-third w3-container w3-margin-bottom">
-      <img src="newsletters/rc/Sept2019.jpg" style="width:100%" class="w3-hover-opacity" onclick="onClick1(this)" alt="September 2019 Newsletter">
+      <img src="newsletters/rc/May2019.jpg" style="width:100%" class="w3-hover-opacity" onclick="onClick1(this)" alt="March 2019 Newsletter">
     </div>
   </div>
 
   <div class="w3-row-padding">
     <div class="w3-third w3-container w3-margin-bottom">
-      <img src="newsletters/rc/May2019.jpg" style="width:100%" class="w3-hover-opacity" onclick="onClick1(this)" alt="May 2019 Newsletter">
-    </div>
-  </div>
-
-  <div class="w3-row-padding">
-    <div class="w3-third w3-container w3-margin-bottom">
-      <img src="newsletters/rc/Apr2019.jpg" style="width:100%" class="w3-hover-opacity" onclick="onClick1(this)" alt="April 2019 Newsletter">
+      <img src="newsletters/rc/Apr2019.jpg" style="width:100%" class="w3-hover-opacity" onclick="onClick1(this)" alt="March 2019 Newsletter">
     </div>
   </div>
 
@@ -154,7 +184,10 @@ body {font-size:16px;}
       <img src="newsletters/rc/Mar2019.jpg" style="width:100%" class="w3-hover-opacity" onclick="onClick1(this)" alt="March 2019 Newsletter">
     </div>
   </div>
-<!-- END Newsletters list -->
+
+
+
+
 
   <!-- Modal for full size images on click-->
   <div id="modal02" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
@@ -169,9 +202,30 @@ body {font-size:16px;}
 
 
 
-<!-- Contacts -->
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+  <!-- END On-site tabs -->
+
+
 <div class="w3-display-container w3-opacity-min">
   <div class="w3-content w3-container w3-padding-64" id="contact">
+
         <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i>
         <a style="color:black">Sydney, Australia</a>
         <br>
@@ -214,28 +268,6 @@ function onClick1(element) {
   var captionText = document.getElementById("caption");
   captionText.innerHTML = element.alt;
 }
-
-
-
-// BEGIN On-site tabs script
-function openPage(pageName,elmnt,color) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablink");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].style.backgroundColor = "";
-  }
-  document.getElementById(pageName).style.display = "block";
-  elmnt.style.backgroundColor = color;
-}
-
-// Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
-
-// END On-site tabs script
 
 </script>
 
