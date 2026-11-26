@@ -9,6 +9,7 @@
   var prevBtn = document.getElementById("prev");
   var nextBtn = document.getElementById("next");
   var counter = document.getElementById("counter");
+  var caption = document.getElementById("caption");
   var audio = document.getElementById("music");
   var musicBtn = document.getElementById("music-toggle");
   var stage = document.getElementById("stage");
@@ -32,6 +33,23 @@
     if (!slide || !slide.src) return;
     var img = new Image();
     img.src = slide.src;
+  }
+
+
+  var MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+  function formatDate(iso) {
+    if (!iso) return "";
+    var parts = iso.split("-");
+    if (parts.length !== 3) return iso;
+    var day = parseInt(parts[2], 10);
+    var month = MONTHS[parseInt(parts[1], 10) - 1];
+    if (!month || !day) return iso;
+    return day + " " + month + " " + parts[0];
+  }
+  function updateCaption() {
+    if (!caption || !slides.length) return;
+    var d = formatDate(slides[index].date);
+    caption.textContent = d ? "\uD83D\uDCC5 " + d : "";
   }
 
   function updateCounter() {
@@ -63,6 +81,7 @@
       front.classList.remove("is-active");
       frontIsA = !frontIsA;
       updateCounter();
+      updateCaption();
       preload(index + 1);
       if (instant) {
         // Restore fade after the instant swap has painted.
