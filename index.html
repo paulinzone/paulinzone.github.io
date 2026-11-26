@@ -1,179 +1,46 @@
 <!DOCTYPE html>
-<html>
-<title>Main - Paul Inzon</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="css/w3.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
-
-<style>
-body,h1,h2,h3,h4,h5 {font-family: "PT Mono", sans-serif} /*originally Poppins*/
-body {font-size:16px;}
-.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
-.w3-half img:hover{opacity:1}
-
-/* Turn off parallax scrolling for tablets and phones */
-@media only screen and (max-device-width: 1024px) {
-    .bgimg-1, .bgimg-2, .bgimg-3 {
-        background-attachment: scroll;
-    }
-}
-
-</style>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0b0b0d">
+  <title>Nina</title>
+  <link rel="stylesheet" href="css/carousel.css">
+</head>
 <body>
-
-  <!-- Sidebar/menu -->
-  <nav class="w3-sidebar w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
-    <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
-    <div class="w3-container">
-      <h3 class="w3-padding-64"><b>Paul Inzon</b>
-        <br>
-        <font size="3"> Hi! Welcome to my Portfolio Showcase. </font>
-      </h3>
+  <main class="carousel" aria-roledescription="carousel" aria-label="Photos of Nina">
+    <div class="stage" id="stage">
+      <img class="slide is-active" id="slide-a" alt="" decoding="async">
+      <img class="slide" id="slide-b" alt="" decoding="async">
     </div>
-    <div class="w3-sidebar w3-bar-block">
-      <a href="index.html" onclick="w3_close()" class="w3-button w3-hover-grey">[ Samsung ]</a>
-      <a href="graphics.html" onclick="w3_close()" class="w3-button w3-hover-grey">[ Graphics ]</a>
-      <a href="socialmedia.html" onclick="w3_close()" class="w3-button w3-hover-grey">[ Social Media ]</a>
-      <a href="#contact" onclick="w3_close()" class="w3-button w3-hover-grey">[ Contacts ]</a>
-    </div>
-  </nav>
 
-<!-- Top menu on small screens -->
-<header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
-  <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
+    <button type="button" class="nav nav-prev" id="prev" aria-label="Previous photo">
+      <span aria-hidden="true">&#8249;</span>
+    </button>
+    <button type="button" class="nav nav-next" id="next" aria-label="Next photo">
+      <span aria-hidden="true">&#8250;</span>
+    </button>
 
-</header>
+    <div class="counter" id="counter" aria-live="polite"></div>
+  </main>
 
-<!-- Overlay effect when opening sidebar on small screens -->
-<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+  <audio id="music" src="assets/music/amazing-grace.mp3" loop preload="auto"></audio>
 
-<!-- !PAGE CONTENT! -->
-<div class="w3-main" style="margin-left:340px;margin-right:40px">
+  <button type="button" class="music-toggle is-prompt" id="music-toggle" aria-pressed="false">
+    Tap to play music
+  </button>
 
-  <!-- Header -->
-  <div class="w3-container" style="margin-top:80px" id="showcase">
-    <h1 class="w3-jumbo"><b>Samsung</b></h1>
-    <hr style="width:50px;border:5px solid black" class="w3-animate-bottom w3-sharp">
-  </div>
+  <footer class="credit">
+    Music: &ldquo;Amazing Grace 2011&rdquo; by
+    <a href="https://incompetech.com" rel="noreferrer">Kevin MacLeod (incompetech.com)</a>,
+    <a href="https://creativecommons.org/licenses/by/3.0/" rel="license">CC BY 3.0</a>.
+    <a href="CREDITS.md">Credits</a>
+  </footer>
 
-  <!-- Graphics Design work -->
+  <noscript>
+    <p class="noscript">This photo carousel needs JavaScript. Please enable it to view the photos of Nina.</p>
+  </noscript>
 
-  <div class="w3-row-padding">
-  
-    <div class="w3-col w3-container w3-margin-bottom">
-          <img src="images/samsung/2024 Unpacked Recap - 01.jpg" style="width:100%" class="w3-animate-left w3-hover-opacity" onclick="onClick(this)" alt="2024 Unpacked Recap">
-    </div>
-    
-    <div class="w3-col w3-container w3-margin-bottom">
-          <img src="images/samsung/2024 Unpacked Recap - 02.jpg" style="width:100%" class="w3-animate-left w3-hover-opacity" onclick="onClick(this)" alt="2024 Unpacked Recap">
-    </div>
-    
-    <div class="w3-col w3-container w3-margin-bottom">
-          <img src="images/samsung/2024 Unpacked Recap - 03.jpg" style="width:100%" class="w3-animate-left w3-hover-opacity" onclick="onClick(this)" alt="2024 Unpacked Recap">
-    </div>
-    
-    <div class="w3-col w3-container w3-margin-bottom">
-          <img src="images/samsung/2024 Unpacked Recap - 04.jpg" style="width:100%" class="w3-animate-left w3-hover-opacity" onclick="onClick(this)" alt="2024 Unpacked Recap">
-    </div>
-    
-    <div class="w3-col w3-container w3-margin-bottom">
-          <img src="images/samsung/One Pager for - What's New On S+.jpg" style="width:100%" class="w3-animate-left w3-hover-opacity" onclick="onClick(this)" alt="One Pager for - What's New On S+">
-    </div>
-    
-    <div class="w3-col w3-container w3-margin-bottom">
-          <img src="images/samsung/S+ FAQ - How to Re-register for a Certification.jpg" style="width:100%" class="w3-animate-left w3-hover-opacity" onclick="onClick(this)" alt="S+ FAQ - How to Re-register for a Certification">
-    </div>
-    
-    <div class="w3-col w3-container w3-margin-bottom">
-          <img src="images/samsung/S+ FAQ - How do I Start a Quiz.jpg" style="width:100%" class="w3-animate-left w3-hover-opacity" onclick="onClick(this)" alt="S+ FAQ - How do I Start a Quiz">
-    </div>
-    
-    <div class="w3-col w3-container w3-margin-bottom">
-          <img src="images/samsung/S+ Mystery Merch Update.jpg" style="width:100%" class="w3-animate-left w3-hover-opacity" onclick="onClick(this)" alt="S+ Mystery Merch Update">
-    </div>
-    
-    <div class="w3-col w3-container w3-margin-bottom">
-          <img src="images/samsung/S+ Certification - How-to.jpg" style="width:100%" class="w3-animate-left w3-hover-opacity" onclick="onClick(this)" alt="S+ Certification - How-to">
-    </div>
-    
-    <div class="w3-col w3-container w3-margin-bottom">
-          <img src="images/samsung/Desktop - 0.png" style="width:100%" class="w3-animate-left w3-hover-opacity" onclick="onClick(this)" alt="S+ Homescreen">
-    </div>
-    
-    <div class="w3-col w3-container w3-margin-bottom">
-          <img src="images/samsung/Desktop - 1.png" style="width:100%" class="w3-animate-left w3-hover-opacity" onclick="onClick(this)" alt="Activity Builder via Samsung LMS">
-    </div>
-    
-    <div class="w3-col w3-container w3-margin-bottom">
-        <img src="images/samsung/Desktop - 2.png" style="width:100%" class="w3-animate-left w3-hover-opacity" onclick="onClick(this)" alt="S24 Quiz">
-    </div>
-    
-    <div class="w3-col w3-container w3-margin-bottom">
-          <img src="images/samsung/Discord - 1.png" style="width:100%" class="w3-animate-left w3-hover-opacity" onclick="onClick(this)" alt="Discord Unpacked Engagement">
-    </div>
-    
-    <div class="w3-col w3-container w3-margin-bottom">
-        <img src="images/samsung/Discord - 2.png" style="width:100%" class="w3-animate-left w3-hover-opacity" onclick="onClick(this)" alt="Mystery Merch Engagement">
-    </div>
-    
-    
-
-
-    
-  </div>
-
-
-  <!-- Modal for full size images on click-->
-  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
-    <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
-    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
-      <img id="img01" class="w3-image">
-      <p id="caption"></p>
-    </div>
-  </div>
-
-
-<!-- Contacts -->
-<div class="w3-display-container w3-opacity-min">
-  <div class="w3-content w3-container w3-padding-64" id="contact">
-
-        <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i>
-        <a style="color:black">Sydney, Australia</a>
-        <br>
-        <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i>
-        <a style="color:black">Phone: 0466 490 347</a>
-        <br>
-        <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i>
-        <a style="color:black">Email: paulinzon@gmail.com</a>
-        <br>
-      </div>
-</div>
-
-<!-- End page content -->
-</div>
-
-<script>
-// Script to open and close sidebar
-function w3_open() {
-    document.getElementById("mySidebar").style.display = "block";
-    document.getElementById("myOverlay").style.display = "block";
-}
-
-function w3_close() {
-    document.getElementById("mySidebar").style.display = "none";
-    document.getElementById("myOverlay").style.display = "none";
-}
-
-// Modal Image Gallery
-function onClick(element) {
-  document.getElementById("img01").src = element.src;
-  document.getElementById("modal01").style.display = "block";
-  var captionText = document.getElementById("caption");
-  captionText.innerHTML = element.alt;
-}
-</script>
-
+  <script src="js/carousel.js"></script>
 </body>
 </html>
